@@ -17,6 +17,8 @@ You can add a help file for your own functions without putting them into a packa
     Title(myfunction) <- "My awesome function"
     Description(myfunction) <- "This function allows you to add two numbers together"
     Arguments(myfunction) <- c(x = "Numeric. First number to add", y = "Numeric. Second number to add")
+    Return(myfunction) <- "The sum of x and y"
+    Details(myfunction) <- "You might need to study some arithmetic to understand this function"
     Examples(myfunction) <- "myfunction(1, 2)"
     # Will show the documentation just like a normal function
     fdHelp(myfunction)

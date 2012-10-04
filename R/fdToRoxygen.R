@@ -6,6 +6,12 @@ fdToRoxygen <- function(fun, funname = as.character(substitute(fun))){
     arguments <- paste("@param", 
                        argumentsCheck(fun))
     
+    ret <- if(!is.null(Return(fun))){
+        c("@return", Return(fun))
+    }else{
+        ""
+    }
+    
     details <- if(!is.null(Details(fun))){
         c("@section Details:", Details(fun))
     }else{
@@ -27,6 +33,7 @@ fdToRoxygen <- function(fun, funname = as.character(substitute(fun))){
                   description,
                   "",
                   arguments,
+                  ret,
                   details,
                   examples,
                   export) 

@@ -36,3 +36,4 @@ Collate:
     'fdToRoxygen.R'
     'argumentsCheck.R'
     'nonNullDefault.R'
+    'Return.R'
