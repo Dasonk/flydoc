@@ -7,7 +7,7 @@ The `flydoc` package is designed to provide an easy way to document your functio
 
 You can add a help file for your own functions without putting them into a package using the `flydoc` package.  There are several ways to do this.
 
-  1. Add the documentation using several of the accessor functions. For instance if you have a function `myfun` you could add documentation using the following syntax    
+  - Add the documentation using several of the accessor functions. For instance if you have a function `myfun` you could add documentation using the following syntax
 
 ```r
 library(flydoc)
@@ -32,8 +32,7 @@ example(fdHelp)
 fdHelp(myfun)
 fdExample(myfun)
 ```
-
-  2. You can have your function in a script with documentation and read it in with the `fdRead` function (not yet implemented).  There are two methods to store this documentation planned for the future.  You can have roxygen2 style documenation comments in the source code that will be read, parsed, and converted to the appropriate format so that you can use the `fdHelp` function to display.  The other alternative is to have normal comments directly after the function definition which will be used as the "description" in the help file.  You can add further documentation using the accessor functions.
+  - You can have your function in a script with documentation and read it in with the `fdRead` function (not yet implemented).  There are two methods to store this documentation planned for the future.  You can have roxygen2 style documenation comments in the source code that will be read, parsed, and converted to the appropriate format so that you can use the `fdHelp` function to display.  The other alternative is to have normal comments directly after the function definition which will be used as the "description" in the help file.  You can add further documentation using the accessor functions.
 
 ## Goals
 
