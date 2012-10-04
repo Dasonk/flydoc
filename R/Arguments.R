@@ -1,0 +1,26 @@
+#' Look at flydoc arguments
+#' 
+#' Look at the the arguments for your flydoc documnetation
+#' for a given function
+#' 
+#' @param fun A function
+#' @export
+Arguments <- function(fun){
+    tryCatch(get("Arguments", envir = attr(fun, "flydoc")), 
+             error = function(e){NULL})
+}
+
+#' Set the flydoc arguments documentation
+#' 
+#' Set the documentation for the arguments for a
+#' given function
+#' 
+#' @param func A function to add flydoc argument documentation to.
+#' @param value A named character vector containgin the 
+#'  argument documentation to add to the function's documentation
+#' @export
+"Arguments<-" <- function(func, value){
+    func <- flydoc(func)
+    assign("Arguments", value, envir = attr(func, "flydoc"))
+    return(invisible(func))
+}
