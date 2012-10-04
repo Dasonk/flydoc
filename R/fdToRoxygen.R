@@ -1,14 +1,36 @@
 fdToRoxygen <- function(fun, funname = as.character(substitute(fun))){
+
+    title <- nonNullDefault(Title(fun), funname)
+    description <- nonNullDefault(Description(fun), funname)
+    
+    arguments <- paste("@param", 
+                       argumentsCheck(fun))
+    
+    details <- if(!is.null(Details(fun))){
+        c("@section Details:", Details(fun))
+    }else{
+        ""
+    }
+    
+    examples <- if(!is.null(Examples(fun))){
+        c("@examples",
+          Examples(fun))
+    }else{
+        ""
+    }
+    
+    export <- "@export" # is export needed?
     
     # for time being assume title, description, and arguments are set
-    roxytext  <-c(Title(fun),
+    roxytext  <-c(title,
                   "",
-                  Description(fun),
+                  description,
                   "",
-                  paste("@param", paste(names(Arguments(fun)), Arguments(fun))),
-                  "@examples",
-                  Examples(fun),
-                  "@export") # is export needed?
+                  arguments,
+                  details,
+                  examples,
+                  export) 
+    
     roxytext <- paste("#'", roxytext, collapse = "\n")
     
     funargs <- capture.output(args(fun))
