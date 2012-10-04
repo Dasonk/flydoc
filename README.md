@@ -11,7 +11,7 @@ You can add a help file for your own functions without putting them into a packa
 ```r
 library(flydoc)
 myfun <- function(x, y){
-    x + y
+  x + y
 }
 Title(myfun) <- "My awesome function"
 Description(myfun) <- "This function allows you to add two numbers together"
