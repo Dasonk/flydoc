@@ -5,6 +5,16 @@
 #' 
 #' @param fun The function to show the flydoc for
 #' @export
+#' @examples
+#' myfun <- function(x, y){
+#'    x + y
+#' }
+#' Title(myfun) <- "My crazy function"
+#' Description(myfun) <- "This function is a crazy function"
+#' Arguments(myfun) <- c(x = "Value 1 to add", y = "Value 2 to add")
+#' \dontrun{
+#' flydochelp(myfun)
+#' }
 flydochelp <- function(fun){
     
     funname <- as.character(substitute(fun))
@@ -19,6 +29,8 @@ flydochelp <- function(fun){
     roc_out(roclet, tfile, tdir)
     
     file <- file.path(tdir, "man", paste0(funname, ".Rd"))
+    
+    # TODO: Add different options...
     temp <- tools::Rd2txt(file, 
                           out = tempfile("Rtxt"), 
                           package = "flydoc")
