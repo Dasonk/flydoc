@@ -1,0 +1,32 @@
+Package: flydoc
+Type: Package
+Title: Provide documentation for your functions on the fly.
+Version: 0.1
+Date: 2012-10-01
+Author@R: c(person("Dason", "Kurkiewicz",
+    role = c("aut", "ctb", "cre"),
+    email = "dasonk@iastate.edu"))
+Author: Dason Kurkiewicz
+Maintainer: Dason Kurkiewicz <dasonk@iastate.edu>
+Depends:
+    R (>= 2.15.0),
+    roxygen2
+Imports:
+    tools
+Description: This package is a designed to provide an easy way to
+    document your functions on the fly.  If you've defined a function
+    interactively this package will still allow you to provide a help
+    file.  If you have a function stored in a script but don't want to
+    or have the time to create a package for it - this will allow you
+    to still provide some help documentation for those functions.
+License: MIT
+URL: https://github.com/Dasonk/flydoc
+Collate:
+    'Title.R'
+    'flydoc.R'
+    'flydocPackage.R'
+    'Arguments.R'
+    'Description.R'
+    'Details.R'
+    'flydocToRoxygen.R'
+    'flydochelp.R'
