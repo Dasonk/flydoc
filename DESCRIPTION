@@ -34,3 +34,5 @@ Collate:
     'fdGet.R'
     'fdHelp.R'
     'fdToRoxygen.R'
+    'argumentsCheck.R'
+    'nonNullDefault.R'
