@@ -10,23 +10,30 @@ You can add a help file for your own functions without putting them into a packa
     1. Add the documentation using several of the accessor functions. For instance if you have a function `myfunction` you could add documentation using the following syntax
     
     ```r
+    library(flydoc)
     myfunction <- function(x, y){
         x + y
     }
     Title(myfunction) <- "My awesome function"
     Description(myfunction) <- "This function allows you to add two numbers together"
     Arguments(myfunction) <- c(x = "Numeric. First number to add", y = "Numeric. Second number to add")
+    Examples(myfunction) <- "myfunction(1, 2)"
     # Will show the documentation just like a normal function
-    flydochelp(myfun)
+    flydocHelp(myfunction)
+    # Will run the examples stored in the documentation
+    flydocExample(myfunction)
     ```
     
-    2. You can have your function in a script with documentation and read it in with the `flydocread` function (not yet implemented).  There are two methods to store this documentation planned for the future.  You can have roxygen2 style documenation comments in the source code that will be read, parsed, and converted to the appropriate format so that you can use the `flydochelp` function to display.  The other alternative is to have normal comments directly after the function definition which will be used as the "description" in the help file.  You can add further documentation using the accessor functions.
+    2. You can have your function in a script with documentation and read it in with the `flydocread` function (not yet implemented).  There are two methods to store this documentation planned for the future.  You can have roxygen2 style documenation comments in the source code that will be read, parsed, and converted to the appropriate format so that you can use the `flydocHelp` function to display.  The other alternative is to have normal comments directly after the function definition which will be used as the "description" in the help file.  You can add further documentation using the accessor functions.
 
 ## Goals
 
     1. Provide help documentation for functions that aren't currently installed in a package.
     2. Make the transition to turning local functions into an actual package easier by eventually providing functionality similar to [Rd2roxygen](http://cran.r-project.org/web/packages/Rd2roxygen/index.html) that will generate roxygen comments for you and add them to the scripts directly.
     3. Currently I'm settling by using a separate function to access the help files for the documentation created with `flydoc`.  Eventually I want this documentation to be accessible directly by using either `help(myflydocfunction)` or `?myflydocfunction`.
+    4.  Currently I'm only allowing displaying text help and am using
+    `file.show` for this.  Unfortunately this doesn't work in RStudio so
+    I need to find a workaround for that...
     
 ## Installation
 
