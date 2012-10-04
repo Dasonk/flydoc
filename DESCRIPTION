@@ -33,3 +33,4 @@ Collate:
     'flydocAssign.R'
     'flydocGet.R'
     'Examples.R'
+    'flydocExample.R'
