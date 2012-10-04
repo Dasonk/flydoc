@@ -12,6 +12,7 @@
 }
 \description{
   Set a return for your flydoc documentation for a given
-  function
+  function. This is what drive the section labeled "Value"
+  in the help files.
 }
 
