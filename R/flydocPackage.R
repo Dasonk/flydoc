@@ -10,5 +10,5 @@
 #' @docType package
 #' @name flydoc
 #' @import tools
-#' @aliases flydoc package-flydoc
+#' @aliases flydoc flydoc-package package-flydoc
 NULL
