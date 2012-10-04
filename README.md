@@ -7,25 +7,31 @@ The `flydoc` package is designed to provide an easy way to document your functio
 
 You can add a help file for your own functions without putting them into a package using the `flydoc` package.  There are several ways to do this.
 
-  1. Add the documentation using several of the accessor functions. For instance if you have a function `myfunction` you could add documentation using the following syntax
-    
-    ```r
-    library(flydoc)
-    myfunction <- function(x, y){
-        x + y
-    }
-    Title(myfunction) <- "My awesome function"
-    Description(myfunction) <- "This function allows you to add two numbers together"
-    Arguments(myfunction) <- c(x = "Numeric. First number to add", y = "Numeric. Second number to add")
-    Return(myfunction) <- "The sum of x and y"
-    Details(myfunction) <- "You might need to study some arithmetic to understand this function"
-    Examples(myfunction) <- "myfunction(1, 2)"
-    # Will show the documentation just like a normal function
-    fdHelp(myfunction)
-    # Will run the examples stored in the documentation
-    fdExample(myfunction)
-    ```
-    
+  1. Add the documentation using several of the accessor functions. For instance if you have a function `myfun` you could add documentation using the following syntax    
+```r
+library(flydoc)
+myfun <- function(x, y){
+    x + y
+}
+Title(myfun) <- "My awesome function"
+Description(myfun) <- "This function allows you to add two numbers together"
+Arguments(myfun) <- c(x = "Numeric. First number to add", y = "Numeric. Second number to add")
+Return(myfun) <- "The sum of x and y"
+Details(myfun) <- "You might need to study some arithmetic to understand this function"
+Examples(myfun) <- "myfunction(1, 2)"
+# Will show the documentation just like a normal function
+fdHelp(myfun)
+# Will run the examples stored in the documentation
+fdExample(myfun)
+```
+You can achieve essentially the same thing by using the example stored in `fdHelp`
+```r
+library(flydoc)
+example(fdHelp)
+fdHelp(myfun)
+fdExample(myfun)
+```
+
   2. You can have your function in a script with documentation and read it in with the `fdRead` function (not yet implemented).  There are two methods to store this documentation planned for the future.  You can have roxygen2 style documenation comments in the source code that will be read, parsed, and converted to the appropriate format so that you can use the `fdHelp` function to display.  The other alternative is to have normal comments directly after the function definition which will be used as the "description" in the help file.  You can add further documentation using the accessor functions.
 
 ## Goals
