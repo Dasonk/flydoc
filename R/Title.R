@@ -6,8 +6,7 @@
 #' @param fun A function
 #' @export
 Title <- function(fun){
-    tryCatch(get("Title", envir = attr(fun, "flydoc")), 
-             error = function(e){NULL})
+    flydocGet("Title", fun)
 }
 
 #' Set a title
@@ -20,8 +19,6 @@ Title <- function(fun){
 #'  title to add to the function's documentation
 #' @export
 "Title<-" <- function(func, value){
-    func <- flydoc(func)
-    assign("Title", value, envir = attr(func, "flydoc"))
-    return(invisible(func))
+    invisible(flydocAssign("Title", func, value))
 }
 

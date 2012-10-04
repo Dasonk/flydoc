@@ -30,3 +30,5 @@ Collate:
     'Details.R'
     'flydocToRoxygen.R'
     'flydochelp.R'
+    'flydocAssign.R'
+    'flydocGet.R'

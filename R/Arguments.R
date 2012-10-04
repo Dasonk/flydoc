@@ -6,8 +6,7 @@
 #' @param fun A function
 #' @export
 Arguments <- function(fun){
-    tryCatch(get("Arguments", envir = attr(fun, "flydoc")), 
-             error = function(e){NULL})
+    flydocGet("Arguments", fun)
 }
 
 #' Set the flydoc arguments documentation
@@ -20,7 +19,5 @@ Arguments <- function(fun){
 #'  argument documentation to add to the function's documentation
 #' @export
 "Arguments<-" <- function(func, value){
-    func <- flydoc(func)
-    assign("Arguments", value, envir = attr(func, "flydoc"))
-    return(invisible(func))
+    invisible(flydocAssign("Arguments", func, value))
 }
