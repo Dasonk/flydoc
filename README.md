@@ -36,9 +36,9 @@ fdExample(myfun)
 
 ## Goals
 
-  1. Provide help documentation for functions that aren't currently installed in a package.
+  1. Provide a way for users to access help documentation for functions that aren't currently installed in a package.
   2. Make the transition to turning local functions into an actual package easier by eventually providing functionality similar to [Rd2roxygen](http://cran.r-project.org/web/packages/Rd2roxygen/index.html) that will generate roxygen comments for you and add them to the scripts directly.
-  3. Currently I'm settling by using a separate function to access the help files for the documentation created with `flydoc`.  Eventually I want this documentation to be accessible directly by using either `help(myflydocfunction)` or `?myflydocfunction`.
+  3. Currently I'm settling on a less-than-ideal solution by using a separate function to access the help files for the documentation created with `flydoc` (`fdHelp`).  Eventually I want this documentation to be accessible directly by using either `help(myflydocfunction)` or `?myflydocfunction`.
   4.  Currently I'm only allowing displaying text help and am using `file.show` for this.  Unfortunately this doesn't work in RStudio so I need to find a workaround for that...
     
 ## Installation
