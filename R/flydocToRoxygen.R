@@ -6,6 +6,8 @@ flydocToRoxygen <- function(fun, funname = as.character(substitute(fun))){
                   Description(fun),
                   "",
                   paste("@param", paste(names(Arguments(fun)), Arguments(fun))),
+                  "@examples",
+                  Examples(fun),
                   "@export") # is export needed?
     roxytext <- paste("#'", roxytext, collapse = "\n")
     
