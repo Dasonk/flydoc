@@ -14,9 +14,9 @@
 #' Arguments(myfun) <- c(x = "Value 1 to add", y = "Value 2 to add")
 #' Examples(myfun) <- "myfun(1, 2)"
 #' \dontrun{
-#' flydochelp(myfun)
+#' flydocHelp(myfun)
 #' }
-flydochelp <- function(fun){
+flydocHelp <- function(fun){
     
     funname <- as.character(substitute(fun))
     roxytext <- flydocToRoxygen(fun, funname = funname)
