@@ -24,6 +24,9 @@ fdHelp <- function(fun){
     roxytext <- fdToRoxygen(fun, funname = funname)
     
     tdir <- tempdir()
+    # TODO:
+    # make flydoc directory and fill with normal
+    # package contents.  Then possibly just use roxygenize?
     if(!file.exists(file.path(tdir, "man"))) dir.create(file.path(tdir, "man"))
     tfile <- tempfile(fileext = ".R")
     cat(roxytext, file = tfile)
@@ -37,7 +40,9 @@ fdHelp <- function(fun){
     temp <- tools::Rd2txt(file, 
                           out = tempfile("Rtxt"), 
                           package = "flydoc")
-    file.show(temp, title = gettextf("R Help on %s", 
-                                     sQuote(funname)), delete.file = TRUE)
+    file.show(temp, 
+              title = gettextf("R Help on %s", sQuote(funname)),
+              delete.file = TRUE)
+    
     return(invisible())
 }
