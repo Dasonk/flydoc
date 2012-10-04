@@ -7,7 +7,7 @@ fdToRoxygen <- function(fun, funname = as.character(substitute(fun))){
                        argumentsCheck(fun))
     
     ret <- if(!is.null(Return(fun))){
-        c("@return", Return(fun))
+        paste("@return", Return(fun))
     }else{
         ""
     }
