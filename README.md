@@ -8,6 +8,7 @@ The `flydoc` package is designed to provide an easy way to document your functio
 You can add a help file for your own functions without putting them into a package using the `flydoc` package.  There are several ways to do this.
 
   1. Add the documentation using several of the accessor functions. For instance if you have a function `myfun` you could add documentation using the following syntax    
+
 ```r
 library(flydoc)
 myfun <- function(x, y){
