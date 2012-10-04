@@ -1,4 +1,4 @@
-flydocToRoxygen <- function(fun, funname = as.character(substitute(fun))){
+fdToRoxygen <- function(fun, funname = as.character(substitute(fun))){
     
     # for time being assume title, description, and arguments are set
     roxytext  <-c(Title(fun),

@@ -14,12 +14,12 @@
 #' Arguments(myfun) <- c(x = "Value 1 to add", y = "Value 2 to add")
 #' Examples(myfun) <- "myfun(1, 2)"
 #' \dontrun{
-#' flydocHelp(myfun)
+#' fdHelp(myfun)
 #' }
-flydocHelp <- function(fun){
+fdHelp <- function(fun){
     
     funname <- as.character(substitute(fun))
-    roxytext <- flydocToRoxygen(fun, funname = funname)
+    roxytext <- fdToRoxygen(fun, funname = funname)
     
     tdir <- tempdir()
     if(!file.exists(file.path(tdir, "man"))) dir.create(file.path(tdir, "man"))

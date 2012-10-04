@@ -6,7 +6,7 @@
 #' @param fun A function
 #' @export
 Arguments <- function(fun){
-    flydocGet("Arguments", fun)
+    fdGet("Arguments", fun)
 }
 
 #' Set the flydoc arguments documentation
@@ -19,5 +19,5 @@ Arguments <- function(fun){
 #'  argument documentation to add to the function's documentation
 #' @export
 "Arguments<-" <- function(func, value){
-    invisible(flydocAssign("Arguments", func, value))
+    invisible(fdAssign("Arguments", func, value))
 }

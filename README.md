@@ -19,12 +19,12 @@ You can add a help file for your own functions without putting them into a packa
     Arguments(myfunction) <- c(x = "Numeric. First number to add", y = "Numeric. Second number to add")
     Examples(myfunction) <- "myfunction(1, 2)"
     # Will show the documentation just like a normal function
-    flydocHelp(myfunction)
+    fdHelp(myfunction)
     # Will run the examples stored in the documentation
-    flydocExample(myfunction)
+    fdExample(myfunction)
     ```
     
-    2. You can have your function in a script with documentation and read it in with the `flydocread` function (not yet implemented).  There are two methods to store this documentation planned for the future.  You can have roxygen2 style documenation comments in the source code that will be read, parsed, and converted to the appropriate format so that you can use the `flydocHelp` function to display.  The other alternative is to have normal comments directly after the function definition which will be used as the "description" in the help file.  You can add further documentation using the accessor functions.
+    2. You can have your function in a script with documentation and read it in with the `fdRead` function (not yet implemented).  There are two methods to store this documentation planned for the future.  You can have roxygen2 style documenation comments in the source code that will be read, parsed, and converted to the appropriate format so that you can use the `fdHelp` function to display.  The other alternative is to have normal comments directly after the function definition which will be used as the "description" in the help file.  You can add further documentation using the accessor functions.
 
 ## Goals
 

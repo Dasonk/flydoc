@@ -6,7 +6,7 @@
 #' @param fun A function
 #' @export
 Description <- function(fun){
-    flydocGet("Description", fun)
+    fdGet("Description", fun)
 }
 
 #' Set a description
@@ -19,5 +19,5 @@ Description <- function(fun){
 #'  the description to add to the function's documentation
 #' @export
 "Description<-" <- function(func, value){
-    invisible(flydocAssign("Description", func, value))
+    invisible(fdAssign("Description", func, value))
 }

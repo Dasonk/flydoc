@@ -5,7 +5,7 @@
 #' 
 #' @param fun The function that has flydoc documentation
 #' @export
-flydocExample <- function(fun){
-    text <- attr(fun, "flydoc")$Examples
+fdExample <- function(fun){
+    text <- Examples(fun)
     source(textConnection(text), echo = TRUE)
 }
