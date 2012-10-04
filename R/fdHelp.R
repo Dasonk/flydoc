@@ -31,7 +31,7 @@ fdHelp <- function(fun){
     roc_proc(roclet, tfile, tdir)
     roc_out(roclet, tfile, tdir)
     
-    file <- file.path(tdir, "man", paste(funname, ".Rd", sep = ""))
+    file <- file.path(tdir, "man", paste0(funname, ".Rd"))
     
     # TODO: Add different options...
     temp <- tools::Rd2txt(file, 

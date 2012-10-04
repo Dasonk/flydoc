@@ -37,3 +37,4 @@ Collate:
     'argumentsCheck.R'
     'nonNullDefault.R'
     'Return.R'
+    'paste0.R'
