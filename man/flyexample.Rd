@@ -1,8 +1,8 @@
-\name{fdExample}
-\alias{fdExample}
+\name{flyexample}
+\alias{flyexample}
 \title{Run examples from flydoc function}
 \usage{
-  fdExample(fun)
+  flyexample(fun)
 }
 \arguments{
   \item{fun}{The function that has flydoc documentation}

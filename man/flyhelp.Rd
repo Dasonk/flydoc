@@ -1,8 +1,8 @@
-\name{fdHelp}
-\alias{fdHelp}
+\name{flyhelp}
+\alias{flyhelp}
 \title{Show the documentation for a flydoc function}
 \usage{
-  fdHelp(fun)
+  flyhelp(fun)
 }
 \arguments{
   \item{fun}{The function to show the flydoc for}
@@ -22,7 +22,7 @@ Return(myfun) <- "The sum of x and y"
 Details(myfun) <- "This uses some pretty advanced math. You might need to read up on arithmetic"
 Examples(myfun) <- "myfun(1, 2)"
 \dontrun{
-fdHelp(myfun)
+flyhelp(myfun)
 }
 }
 

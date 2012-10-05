@@ -21,24 +21,24 @@ Return(myfun) <- "The sum of x and y"
 Details(myfun) <- "You might need to study some arithmetic to understand this function"
 Examples(myfun) <- "myfunction(1, 2)"
 # Will show the documentation just like a normal function
-fdHelp(myfun)
+flyhelp(myfun)
 # Will run the examples stored in the documentation
-fdExample(myfun)
+flyexample(myfun)
 ```
-You can achieve essentially the same thing by using the example stored in `fdHelp`
+You can achieve essentially the same thing by using the example stored in `flyhelp`
 ```r
 library(flydoc)
-example(fdHelp)
-fdHelp(myfun)
-fdExample(myfun)
+example(flyhelp)
+flyhelp(myfun)
+flyexample(myfun)
 ```
-  - You can have your function in a script with documentation and read it in with the `fdRead` function (not yet implemented).  There are two methods to store this documentation planned for the future.  You can have roxygen2 style documenation comments in the source code that will be read, parsed, and converted to the appropriate format so that you can use the `fdHelp` function to display.  The other alternative is to have normal comments directly after the function definition which will be used as the "description" in the help file.  You can add further documentation using the accessor functions.
+  - You can have your function in a script with documentation and read it in with the `flyread` function (not yet implemented).  There are two methods to store this documentation planned for the future.  You can have roxygen2 style documenation comments in the source code that will be read, parsed, and converted to the appropriate format so that you can use the `flyhelp` function to display.  The other alternative is to have normal comments directly after the function definition which will be used as the "description" in the help file.  You can add further documentation using the accessor functions.
 
 ## Goals
 
   1. Provide a way for users to access help documentation for functions that aren't currently installed in a package.
   2. Make the transition to turning local functions into an actual package easier by eventually providing functionality similar to [Rd2roxygen](http://cran.r-project.org/web/packages/Rd2roxygen/index.html) that will generate roxygen comments for you and add them to the scripts directly.
-  3. Currently I'm settling on a less-than-ideal solution by using a separate function to access the help files for the documentation created with `flydoc` (`fdHelp`).  Eventually I want this documentation to be accessible directly by using either `help(myflydocfunction)` or `?myflydocfunction`.
+  3. Currently I'm settling on a less-than-ideal solution by using a separate function to access the help files for the documentation created with `flydoc` (`flyhelp`).  Eventually I want this documentation to be accessible directly by using either `help(myflydocfunction)` or `?myflydocfunction`.
   4.  Currently I'm only allowing displaying text help and am using `file.show` for this.  Unfortunately this doesn't work in RStudio so I need to find a workaround for that...
     
 ## Installation

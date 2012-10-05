@@ -6,7 +6,7 @@
 #' @param fun A function
 #' @export
 Examples <- function(fun){
-    fdGet("Examples", fun)
+    flyget("Examples", fun)
 }
 
 #' Set some examples
@@ -19,5 +19,5 @@ Examples <- function(fun){
 #'  examples to add to the function's documentation
 #' @export
 "Examples<-" <- function(func, value){
-    invisible(fdAssign("Examples", func, value))
+    invisible(flyassign("Examples", func, value))
 }

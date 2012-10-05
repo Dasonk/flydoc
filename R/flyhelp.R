@@ -16,9 +16,9 @@
 #' Details(myfun) <- "This uses some pretty advanced math. You might need to read up on arithmetic"
 #' Examples(myfun) <- "myfun(1, 2)"
 #' \dontrun{
-#' fdHelp(myfun)
+#' flyhelp(myfun)
 #' }
-fdHelp <- function(fun){
+flyhelp <- function(fun){
     
     funname <- as.character(substitute(fun))
     roxytext <- fdToRoxygen(fun, funname = funname)

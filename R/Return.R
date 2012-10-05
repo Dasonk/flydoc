@@ -8,7 +8,7 @@
 #' @aliases Value
 #' @export
 Return <- function(fun){
-    fdGet("Return", fun)
+    flyget("Return", fun)
 }
 
 #' Set documentation for return
@@ -22,5 +22,5 @@ Return <- function(fun){
 #'  return to add to the function's documentation
 #' @export
 "Return<-" <- function(func, value){
-    invisible(fdAssign("Return", func, value))
+    invisible(flyassign("Return", func, value))
 }

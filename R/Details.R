@@ -6,7 +6,7 @@
 #' @param fun A function
 #' @export
 Details <- function(fun){
-    fdGet("Details", fun)
+    flyget("Details", fun)
 }
 
 #' Set a detail section
@@ -19,5 +19,5 @@ Details <- function(fun){
 #'  details section to add to the function's documentation
 #' @export
 "Details<-" <- function(func, value){
-    invisible(fdAssign("Details", func, value))
+    invisible(flyassign("Details", func, value))
 }

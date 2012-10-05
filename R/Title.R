@@ -6,7 +6,7 @@
 #' @param fun A function
 #' @export
 Title <- function(fun){
-    fdGet("Title", fun)
+    flyget("Title", fun)
 }
 
 #' Set a title
@@ -19,6 +19,6 @@ Title <- function(fun){
 #'  title to add to the function's documentation
 #' @export
 "Title<-" <- function(func, value){
-    invisible(fdAssign("Title", func, value))
+    invisible(flyassign("Title", func, value))
 }
 
