@@ -23,7 +23,6 @@ License: MIT
 URL: https://github.com/Dasonk/flydoc
 Collate:
     'Title.R'
-    'flydoc.R'
     'flydocPackage.R'
     'Arguments.R'
     'Description.R'
@@ -38,3 +37,4 @@ Collate:
     'flyexample.R'
     'flyget.R'
     'flyhelp.R'
+    'flycheck.R'
