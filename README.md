@@ -19,7 +19,7 @@ Description(myfun) <- "This function allows you to add two numbers together"
 Arguments(myfun) <- c(x = "Numeric. First number to add", y = "Numeric. Second number to add")
 Return(myfun) <- "The sum of x and y"
 Details(myfun) <- "You might need to study some arithmetic to understand this function"
-Examples(myfun) <- "myfunction(1, 2)"
+Examples(myfun) <- "myfun(1, 2)"
 # Will show the documentation just like a normal function
 flyhelp(myfun)
 # Will run the examples stored in the documentation
