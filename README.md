@@ -28,6 +28,7 @@ flyexample(myfun)
 You can achieve essentially the same thing by using the example stored in `flyhelp`
 ```r
 library(flydoc)
+# Runs the code in the chunk above up to the call to flyhelp
 example(flyhelp)
 flyhelp(myfun)
 flyexample(myfun)
