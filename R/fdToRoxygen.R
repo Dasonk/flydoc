@@ -19,8 +19,7 @@ fdToRoxygen <- function(fun, funname = as.character(substitute(fun))){
     }
     
     examples <- if(!is.null(Examples(fun))){
-        c("@examples",
-          Examples(fun))
+        c("@examples", Examples(fun))
     }else{
         ""
     }
