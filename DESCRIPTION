@@ -2,7 +2,7 @@ Package: flydoc
 Type: Package
 Title: Provide documentation for your functions on the fly.
 Version: 0.1
-Date: 2012-10-01
+Date: 2015-12-10
 Author@R: c(person("Dason", "Kurkiewicz",
     role = c("aut", "ctb", "cre"),
     email = "dasonk@iastate.edu"))
